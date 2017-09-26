@@ -243,9 +243,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 	<attr path="//struct[@cname='GstVideoGLTextureUploadMeta']" name="noequals">true</attr>
 	<attr path="//object[@cname='GstPad']//union" name="hidden">true</attr>
 	<attr path="//struct[@cname='GstControlPoint']" name="hidden">true</attr>
+
 	<move-node path="//boxed[@cname='GstVideoCodecFrame']/union/field">//boxed[@cname='GstVideoCodecFrame']</move-node>
 	<attr path="//boxed[@cname='GstVideoCodecFrame']/union" name="hidden">true</attr>
 	<attr path="//boxed[@cname='GstVideoCodecFrame']/union/field[@cname='padding']" name="type">gpointer</attr>
+
+	<attr path="//boxed[@cname='GstVideoInfo']" name="noequals">true</attr>
+
 	<attr path="//*[@type='const GList*']" name="type">GList*</attr>
 	<attr path="//*[@type='const GSList*']" name="type">GSList*</attr>
 	<attr path="//object/field[@cname='object' and @type='GstObject*']" name="hidden">true</attr>
